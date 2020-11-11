@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/wiz.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>About me</title>
+    <style>
+      .text {
+        color: rgb(177, 182, 209);
+        font-family: "Arial";
+        font-size: clamp(1em, 2.5vw, 1.3em);
+        margin: 2% 1% 2% 1%;
+        line-height: 4vh;
+      }
+
+      .imgAndCaption {
+        position: relative;
+        text-align: center;
+        color: white;
+        padding-bottom: 1px;
+      }
+
+      .img {
+        width: 30%;
+        margin-top: 2%;
+        padding-bottom: 0;
+      }
+
+      .caption {
+        /* positioning */
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* sizes  & design */
+        background-color: black;
+        padding: 2px 0 4px 1px;
+        width: 30%;
+        height: 9%;
+
+        /* text */
+        color: rgb(177, 182, 209);
+        font-size: clamp(1px, 2.5vw, 1.3em);
+        text-align: left;
+        font-family: "Arial";
+      }
+
+      .link {
+        transition: 0.5s;
+        color: aliceblue;
+      }
+
+      .link:hover {
+        background-color: rgb(206, 206, 15);
+        color: black;
+      }
+
+      .link:active {
+        transition: 0s;
+        background-color: rgb(67, 179, 85);
+      }
+
+      @media only screen and (max-width: 700px) {
+        .img {
+          width: 80%;
+        }
+
+        .caption {
+          width: 80%;
+          height: 8%;
+          font-size: clamp(0.8em, 4vw, 1.3em);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <p class="title">Aldwin's Portfolio</p>
+      </div>
+      <div class="navi" style="margin-left: auto">
+        <a href="index.html" class="title"> Home </a>
+      </div>
+    </nav>
+
+    <section class="section">
+      <figure class="imgAndCaption">
+        <img src="assets/alds.png" class="img" />
+        <figcaption class="caption">
+          Made with
+          <a href="https://picrew.me/image_maker/94097" class="link">
+            Picrew
+          </a>
+        </figcaption>
+      </figure>
+
+      <div>
+        <p class="text">
+          <span style="font-size: xx-large; color: aliceblue; line-height: 6vh">
+            Hello, my name is Aldwin!
+          </span>
+        </p>
+      </div>
+
+      <br />
+
+      <div>
+        <p class="text">
+          I am currently a Freshman student studying Information Technology at
+          <a href="http://tip.edu.ph/" target="_blank" class="link">
+            Technological Institute of the Philippines </a
+          >. This is a website I made to train myself in using HTML and CSS.
+        </p>
+      </div>
+
+      <br />
+
+      <div>
+        <p class="text">
+          Currently, I have no idea how to use Javascript. I only know
+          <span style="color: aliceblue">HTML, CSS, Java, and C++</span>.
+        </p>
+      </div>
+
+      <br />
+
+      <div>
+        <p class="text">
+          I like to do a lot of things such as taking care of plants, drawing on
+          my sketchpad, and playing the guitar.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
