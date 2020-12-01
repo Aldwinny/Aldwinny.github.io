@@ -12,6 +12,36 @@
         animation-delay: 1.1s;
       }
 
+      .section3 > div > div > span {
+        font-family: Nexa light;
+        font-size: clamp(1.3rem, 1.5rem, 2rem);
+      }
+
+      .section3 > div > div > p {
+        font-family: monospace;
+        font-size: clamp(1rem, 1.2rem, 3rem);
+        padding-top: 3vh;
+      }
+
+      .headContainer {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 40vh 0 50vh 0;
+        animation: goToTop 0.3s ease 1.3s forwards;
+      }
+
+      .headTitle {
+        font-family: "Nexa Light";
+        text-align: center;
+        color: aliceblue;
+        font-size: clamp(1.5em, 4vw, 3em);
+        animation: backInDown 1s, textEffect 1s infinite 1.2s;
+      }
+
       @keyframes backInDown {
         0% {
           transform: translateY(-1200px) scale(0.7);
@@ -26,6 +56,15 @@
         100% {
           transform: scale(1);
           opacity: 1;
+        }
+      }
+
+      @keyframes goToTop {
+        from {
+          padding: 40vh 0 50vh 0;
+        }
+        to {
+          padding: 20vh 0 10vh 0;
         }
       }
 
@@ -53,6 +92,30 @@
     <header class="headContainer">
       <div class="headTitle">Dream beyond imagination.</div>
     </header>
+
+    <section class="section3">
+      <div>
+        <img src="assets/web.png" />
+        <div>
+          <span>Web Developer</span>
+          <p>> Things I know about Web Dev</p>
+        </div>
+      </div>
+      <div>
+        <img src="assets/Android.png" />
+        <div>
+          <span>Mobile Developer</span>
+          <p>> Things I know about Mobile Dev</p>
+        </div>
+      </div>
+      <div>
+        <img src="assets/Flutter.png" />
+        <div>
+          <span>Others</span>
+          <p>> Here are the other languages I know</p>
+        </div>
+      </div>
+    </section>
 
     <section>
       <div class="section2" style="padding-bottom: 1px">
