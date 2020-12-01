@@ -89,7 +89,13 @@ h3 {
   width: 100%;
   padding: 3vh 0 3vh 0;
   margin: 0 0 0 0;
-  animation: fade 0.5s ease 1s backwards;
+}
+
+.section2 > div > p {
+  text-align: left;
+  padding-left: 1vh;
+  font-size: 1.7rem;
+  font-family: "Nexa bold";
 }
 
 .section3 {
@@ -129,6 +135,20 @@ h3 {
   padding: 6vh 1vw 6vh 1vw;
 }
 
+.linkWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.linkWrap > a {
+  padding-left: 10px;
+}
+
+.linkWrap > a > img {
+  width: 40px;
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -138,6 +158,12 @@ h3 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes expFade {
+  from {
+    opacity: 0;
   }
 }
 
