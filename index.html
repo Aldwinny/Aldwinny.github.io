@@ -8,6 +8,13 @@
     <script src="script.js"></script>
     <title>Aldwin's Website</title>
     <style>
+      figure {
+        margin: 5vh 5vw 5vh 5vw;
+      }
+      figure > img {
+        width: 40vw;
+      }
+
       .navbar {
         animation-delay: 1.1s;
       }
@@ -42,10 +49,21 @@
         font-size: clamp(1.3rem, 1.5rem, 2rem);
       }
 
-      .section3 > div > div > p {
+      .button {
+        color: #0cc712;
+        border-style: solid;
+        border-width: thin;
+        border-radius: 10px;
+        border-color: #0ab30f;
         font-family: monospace;
         font-size: clamp(1rem, 1.2rem, 3rem);
-        padding-top: 3vh;
+        padding: 5px 10px 5px 10px;
+        margin-top: 3vh;
+      }
+
+      .button:hover {
+        background-color: #0ab30f;
+        color: black;
       }
 
       .headContainer {
@@ -105,6 +123,12 @@
           color: turquoise;
         }
       }
+
+      @media only screen and (max-width: 800px) {
+        figure > img {
+          width: 80vw;
+        }
+      }
     </style>
   </head>
   <body>
@@ -124,24 +148,54 @@
         <img src="assets/web.png" />
         <div>
           <span>Web Developer</span>
-          <p>> Things I know about Web Dev</p>
+          <p class="button">> Things I know about Web Dev</p>
         </div>
       </div>
       <div>
         <img src="assets/Android.png" />
         <div>
           <span>Mobile Developer</span>
-          <p>> Things I know about Mobile Dev</p>
+          <p class="button">> Things I know about Mobile Dev</p>
         </div>
       </div>
       <div>
         <img src="assets/Flutter.png" />
         <div>
           <span>Others</span>
-          <p>> Here are the other languages I know</p>
+          <p class="button">> Here are the other languages I know</p>
         </div>
       </div>
     </section>
+
+    <section class="section4" style="animation: fade 0.5s ease 2s backwards">
+      <p class="text1">Projects:</p>
+      <div class="section3">
+        <div>
+          <figure>
+            <img src="assets/projectimages/fotograpiya.gif" />
+            <figcaption class="text2">Fotograpiya Website</figcaption>
+            <p class="text3">
+              A project website created by me and my group in College (1st Year)
+            </p>
+            <a
+              href="https://fotograpiyaportfolio.000webhostapp.com"
+              target="_blank"
+              class="button"
+              style="margin-left: 7vw; margin-right: 7vw"
+            >
+              Check it out!
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section4" style="animation: fade 0.5s ease 2s backwards">
+      <div style="color: aliceblue; font-family: 'Gotham Medium'">
+        🔨 Under construction 🔨
+      </div>
+    </section>
+
     <section class="section2" style="padding-bottom: 1px">
       <hr />
       <hr />
