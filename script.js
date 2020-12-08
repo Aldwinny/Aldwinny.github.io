@@ -21,5 +21,8 @@ function scrollToOthers() {
 }
 
 function scrollToTop() {
-    window.scrollTo(top);
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
