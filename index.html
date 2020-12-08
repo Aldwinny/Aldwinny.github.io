@@ -15,6 +15,19 @@
         width: 40vw;
       }
 
+      button {
+        text-decoration: none;
+        background-color: transparent;
+      }
+
+      button:active {
+        outline: none;
+      }
+
+      button:focus {
+        outline: none;
+      }
+
       .navbar {
         animation-delay: 1.1s;
       }
@@ -64,6 +77,10 @@
       .button:hover {
         background-color: #0ab30f;
         color: black;
+      }
+
+      .button:active {
+        background-color: white;
       }
 
       .headContainer {
@@ -148,21 +165,30 @@
         <img src="assets/web.png" />
         <div>
           <span>Web Developer</span>
-          <p class="button">> Things I know about Web Dev</p>
+          <br />
+          <button class="button" onclick="scrollToWeb()">
+            > Things I know about Web Dev
+          </button>
         </div>
       </div>
       <div>
         <img src="assets/Android.png" />
         <div>
           <span>Mobile Developer</span>
-          <p class="button">> Things I know about Mobile Dev</p>
+          <br />
+          <button class="button" onclick="scrollToMob()">
+            > Things I know about Mobile Dev
+          </button>
         </div>
       </div>
       <div>
         <img src="assets/Flutter.png" />
         <div>
           <span>Others</span>
-          <p class="button">> Here are the other languages I know</p>
+          <br />
+          <button class="button" onclick="scrollToOthers()">
+            > Programming languages I know
+          </button>
         </div>
       </div>
     </section>
@@ -190,10 +216,64 @@
       </div>
     </section>
 
+    <section
+      class="section4"
+      style="animation: fade 0.5s ease 2s backwards"
+      id="web"
+    >
+      <p class="text1" style="margin-bottom: 0">Web Dev:</p>
+      <div class="section3">
+        <div class="text3">
+          <div>HTML: 100%</div>
+          <div>CSS: 80%</div>
+          <div>Javascript: 1%</div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="section4"
+      style="animation: fade 0.5s ease 2s backwards"
+      id="mob"
+    >
+      <p class="text1" style="margin-bottom: 0">Mobile Dev:</p>
+      <div class="section3">
+        <div class="text3">
+          <div>Java: 65%</div>
+          <div>Kotlin: 0%</div>
+          <div>Dart: 1%</div>
+          <div>Flutter: 1%</div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="section4"
+      style="animation: fade 0.5s ease 2s backwards"
+      id="others"
+    >
+      <p class="text1" style="margin-bottom: 0">Others:</p>
+      <div class="section3">
+        <div class="text3">
+          <div>English: Fluent</div>
+          <div>Filipino: Fluent</div>
+          <div>Japanese: 10%</div>
+          <div>Spanish: 2%</div>
+        </div>
+      </div>
+    </section>
+
     <section class="section4" style="animation: fade 0.5s ease 2s backwards">
       <div style="color: aliceblue; font-family: 'Gotham Medium'">
         🔨 Section Under construction 🔨
       </div>
+      <button
+        class="button"
+        style="margin-top: 1vh; margin-bottom: 1vh"
+        onclick="scrollToTop()"
+      >
+        Go back up
+      </button>
     </section>
 
     <section class="section2" style="padding-bottom: 1px">
@@ -203,7 +283,7 @@
       <hr />
     </section>
 
-    <footer class="section2" style="background-color: aliceblue">
+    <footer class="section2" style="background-color: aliceblue" id="footer">
       <div>
         <p>Check me out!</p>
         <div class="linkWrap">
@@ -222,6 +302,7 @@
           <span style="font-size: 1.3rem">
             Also this website is still under construction!
           </span>
+          <br />
         </p>
       </div>
     </footer>
