@@ -5,17 +5,17 @@
 
 @font-face {
   font-family: "Gotham medium";
-  src: url("fonts/gotham-medium/Gotham-Medium.otf");
+  src: url("fonts/gotham-medium/Gotham-Medium.woff");
 }
 
 @font-face {
   font-family: "Nexa Bold";
-  src: url("fonts/nexa/NexaBold.otf");
+  src: url("fonts/nexa/Nexa-Bold.woff");
 }
 
 @font-face {
   font-family: "Nexa Light";
-  src: url("fonts/nexa/NexaLight.otf");
+  src: url("fonts/nexa/Nexa-Light.woff");
 }
 
 body {
