@@ -1,0 +1,84 @@
+/* 
+*  Dev note: use clamp to resize the fonts, 
+*  em or rem sizes should also be utilized 
+*/
+
+/* Overriden Values */
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Navigation */
+
+.navbar {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  background-color: black;
+}
+
+.navbar > div {
+  padding: 3vh 1vw 3vh 1vw;
+  color: white;
+}
+.navbar > div:first-child {
+  padding: 1px 0 0 1px;
+  margin-right: auto;
+  color: red;
+}
+/* Sections */
+
+.header {
+  background-color: rgb(212, 25, 25);
+  height: 100vh;
+  width: 100%;
+  animation: temp 4s infinite;
+}
+
+@keyframes temp {
+  0% {
+    background-color: rgb(212, 25, 25);
+  }
+  50% {
+    background-color: rgb(146, 25, 25);
+  }
+  100% {
+    background-color: rgb(212, 25, 25);
+  }
+}
+
+.header > * {
+  margin: 0;
+}
+
+.logo {
+  height: 8vh;
+}
+
+.section2 {
+  width: 100%;
+  padding: 3vh 0 3vh 0;
+  margin: 0 0 0 0;
+}
+
+/* Footer */
+
+.linkWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.linkWrap > a {
+  padding-left: 10px;
+}
+
+.linkWrap > a > img {
+  width: 40px;
+}
