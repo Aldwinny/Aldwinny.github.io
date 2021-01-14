@@ -45,6 +45,14 @@
   font-size: clamp(1.2em, 4vw, 1.5em);
 }
 
+.text-white {
+  font-family: sans-serif;
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: clamp(1.2em, 4vw, 1.5em);
+}
+
 .link {
   font-family: bahnschrift;
   color: rgb(228, 228, 228);

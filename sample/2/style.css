@@ -58,6 +58,10 @@ a {
 
 /* Footer */
 
+footer {
+  background-color: black;
+}
+
 .linkWrap {
   display: flex;
   flex-direction: row;
