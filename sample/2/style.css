@@ -35,22 +35,11 @@ a {
 /* Sections */
 
 .header {
-  background-color: rgb(212, 25, 25);
+  background-image: url("./Assets/header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100%;
-  animation: temp 4s infinite;
-}
-
-@keyframes temp {
-  0% {
-    background-color: rgb(212, 25, 25);
-  }
-  50% {
-    background-color: rgb(146, 25, 25);
-  }
-  100% {
-    background-color: rgb(212, 25, 25);
-  }
 }
 
 .header > * {
