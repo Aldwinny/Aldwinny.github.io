@@ -37,20 +37,30 @@
   -webkit-animation: subEffect 0.3s forwards 2.3s;
 }
 
+.headText {
+  margin-bottom: 5vh;
+  text-align: center;
+  letter-spacing: 13px;
+  font-family: sans-serif;
+  font-size: clamp(1.2em, 4vw, 1.5em);
+}
+
+.bodyText {
+  padding: 2vh 2vw 0 2vw;
+  font-family: sans-serif;
+  line-height: 150%;
+  font-size: clamp(1em, 4vw, 1.3em);
+}
+
 .text {
   font-family: sans-serif;
-  color: black;
   padding-left: 5px;
   padding-right: 5px;
   font-size: clamp(1.2em, 4vw, 1.5em);
 }
 
-.text-white {
-  font-family: sans-serif;
+.white {
   color: white;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: clamp(1.2em, 4vw, 1.5em);
 }
 
 .link {
@@ -114,11 +124,5 @@
   }
   100% {
     opacity: 1;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .link {
-    letter-spacing: 1px;
   }
 }
