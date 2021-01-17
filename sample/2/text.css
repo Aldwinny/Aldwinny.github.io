@@ -15,13 +15,13 @@
   background: gray;
 }
 
-/* Everything else.. */
+/* Reserved */
 
 .title {
   color: rgb(228, 228, 228);
   font-family: sans-serif;
-  padding: 30% 0 0 2vw;
-  font-size: clamp(2.1em, 7vw, 5em);
+  padding: 10vh 0 0 2vw;
+  font-size: clamp(2.1em, 7vw, 4em);
   animation: textEffect 2s forwards ease;
   -webkit-animation: textEffect 2s forwards ease;
 }
@@ -37,18 +37,32 @@
   -webkit-animation: subEffect 0.3s forwards 2.3s;
 }
 
+/* Everything else.. */
+
 .headText {
-  margin-bottom: 5vh;
+  margin: 2.5vh 0;
+  font-weight: bold;
   text-align: center;
-  letter-spacing: 13px;
+  font-family: sans-serif;
+  letter-spacing: 0.7em;
+  text-indent: 0.7em;
+  font-size: clamp(1.2em, 4vw, 1.5em);
+}
+
+.headText2 {
+  margin: 3vh 0;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 10px;
+  text-indent: 10px;
   font-family: sans-serif;
   font-size: clamp(1.2em, 4vw, 1.5em);
 }
 
 .bodyText {
-  padding: 2vh 2vw 0 2vw;
+  text-align: center;
+  margin: 2vh 2vw;
   font-family: sans-serif;
-  line-height: 150%;
   font-size: clamp(1em, 4vw, 1.3em);
 }
 
@@ -57,6 +71,23 @@
   padding-left: 5px;
   padding-right: 5px;
   font-size: clamp(1.2em, 4vw, 1.5em);
+}
+
+/* Title */
+.news > div > div:nth-child(2) {
+  padding: 1vh 2vw 1vh 2vw;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial;
+  font-size: clamp(1em, 4vw, 1.3em);
+}
+
+/* Description */
+.news > div > div:nth-child(3) {
+  padding: 1vh 2vw 3vh 2vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: clamp(1em, 4vw, 1.3em);
 }
 
 .white {
@@ -74,6 +105,14 @@
 .link:hover {
   color: rgb(216, 36, 36);
 }
+
+/* reuse */
+
+.text-center {
+  text-align: center;
+}
+
+/* Reserved */
 
 @keyframes textEffect {
   0% {
@@ -125,4 +164,7 @@
   100% {
     opacity: 1;
   }
+}
+
+@media only screen and (max-width: 700px) {
 }
