@@ -23,6 +23,7 @@ a {
   width: 80%;
   background-color: black;
   border-radius: 0 0 20px 20px;
+  align-items: center;
 }
 
 .navbar > div {
@@ -31,7 +32,7 @@ a {
 }
 
 .navbar > div:first-child {
-  padding: 1px 0 0 1px;
+  padding: 1px 1px;
   margin-right: auto;
   color: red;
 }
@@ -56,7 +57,10 @@ a {
 }
 
 .logo {
-  height: 8vh;
+  max-width: 30vh;
+  width: auto;
+  height: auto;
+  image-rendering: auto;
 }
 
 .txtContainer {
@@ -77,6 +81,12 @@ a {
   flex-direction: column;
   flex-wrap: nowrap;
   margin: 2vh 3vw;
+}
+
+.flex > div > img {
+  width: 150px;
+  height: 150px;
+  image-rendering: auto;
 }
 
 .flex > div > div:first-child {
