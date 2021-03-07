@@ -179,8 +179,34 @@ h3 {
   width: 40px;
 }
 
+.btnMargin {
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
 .animate {
   animation: fade 0.5s ease 2s backwards;
+}
+
+.project-container {
+  margin-top: 0;
+}
+
+.project-container figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.project-container figure img {
+  overflow: hidden;
+}
+
+.project-container figure a {
+  position: relative;
+  white-space: nowrap;
 }
 
 @keyframes fade {

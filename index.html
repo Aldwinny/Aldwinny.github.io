@@ -15,13 +15,6 @@
     <script src="script.js"></script>
     <title>Aldwin's Website</title>
     <style>
-      figure {
-        margin: 5vh 5vw 5vh 5vw;
-      }
-      figure > img {
-        width: 40vw;
-      }
-
       button {
         text-decoration: none;
         background-color: transparent;
@@ -79,6 +72,7 @@
         font-size: clamp(1rem, 1.2rem, 3rem);
         padding: 5px 10px 5px 10px;
         margin-top: 3vh;
+        transition-duration: 0.5s;
       }
 
       .button:hover {
@@ -149,9 +143,6 @@
       }
 
       @media only screen and (max-width: 800px) {
-        figure > img {
-          width: 80vw;
-        }
       }
     </style>
   </head>
@@ -200,21 +191,26 @@
       </div>
     </section>
 
-    <section class="section4 animate">
-      <p class="text1" style="margin-bottom: 0">Projects:</p>
-      <div class="section3">
-        <div style="margin-top: 0">
+    <section class="section4 animate" id="web">
+      <p class="text1" style="margin-bottom: 0">Web Dev:</p>
+      <div>
+        <div class="project-container">
+          <!-- Fix width on devices -->
           <figure>
-            <img src="assets/projectimages/fotograpiya.gif" />
+            <img
+              src="assets/projectimages/Fotograpiya.jpg"
+              style="border-radius: 10px"
+            />
+            <!-- Hidden till implemented 
             <figcaption class="text2">Fotograpiya Website</figcaption>
             <p class="text3">
               A project website created by me and my group in College (1st Year)
             </p>
+          -->
             <a
               href="https://fotograpiyaportfolio.000webhostapp.com"
               target="_blank"
-              class="button"
-              style="margin-left: 7vw; margin-right: 7vw"
+              class="button btnMargin"
             >
               Check it out!
             </a>
@@ -223,25 +219,11 @@
       </div>
     </section>
 
-    <section class="section4 animate" id="web">
-      <p class="text1" style="margin-bottom: 0">Web Dev:</p>
-      <div class="section3">
-        <div class="text3">
-          <div>HTML: 70%</div>
-          <div>CSS: 60%</div>
-          <div>Javascript: 1%</div>
-        </div>
-      </div>
-    </section>
-
     <section class="section4 animate" id="mob">
       <p class="text1" style="margin-bottom: 0">Mobile Dev:</p>
       <div class="section3">
         <div class="text3">
-          <div>Java: 45%</div>
-          <div>Kotlin: 0%</div>
-          <div>Dart: 3%</div>
-          <div>Flutter: 1%</div>
+          <div>Will update soon</div>
         </div>
       </div>
     </section>
@@ -250,10 +232,7 @@
       <p class="text1" style="margin-bottom: 0">Others:</p>
       <div class="section3">
         <div class="text3">
-          <div>English: Fluent</div>
-          <div>Filipino: Fluent</div>
-          <div>Japanese: 5%</div>
-          <div>Spanish: 2%</div>
+          <div>Will update soon</div>
         </div>
       </div>
     </section>
