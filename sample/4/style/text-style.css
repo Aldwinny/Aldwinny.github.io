@@ -1,0 +1,55 @@
+/* Import Open Sans from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/* Icon control */
+.icon-sized {
+  font-size: 5vw; /* For unsupported browsers */
+  font-size: clamp(2rem, 3vw, 3rem);
+  cursor: pointer;
+}
+
+.icon-extra {
+  color: white;
+  margin: 10px;
+}
+
+.icon-extra-2 {
+  position: relative;
+  top: 3px;
+  right: 4px;
+  line-height: 6vh;
+}
+
+/* Text Control */
+.font-size-small {
+  font-size: 3vh; /* For unsupported browsers */
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.font-size-medium {
+  font-size: 4vh; /* For unsupported browsers */
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.font-size-large {
+  font-size: 5vh; /* For unsupported browsers */
+  font-size: clamp(2.5rem, 4vw, 3rem);
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .font-size-small {
+    font-size: 7vh;
+    font-size: clamp(0.7rem, 4vw, 1rem);
+  }
+
+  .font-size-medium {
+    font-size: 8vh;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .font-size-large {
+    font-size: 9vh;
+    font-size: clamp(2.5rem, 4vw, 3rem);
+  }
+}

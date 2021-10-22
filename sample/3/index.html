@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Fotograpiya</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+      body {
+        height: 100%;
+        background-image: url("assets/homepage.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        margin: 0px;
+      }
+
+      @keyframes anima1 {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 100;
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html" id="navi"> Fotograpiya </a>
+      <a href="contact.html">CONTACT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="index.html">HOME</a>
+    </div>
+    <div class="space"></div>
+
+    <h1 class="title">Welcome to Fotograpiya</h1>
+
+    <h5 class="subtitle">
+      <div class="space2"></div>
+      "We focus on the details"
+    </h5>
+
+    <br />
+
+    <div class="details">
+      <p>
+        A photography and photo manipulation company started by passionate
+        people<span id="dots">...</span>
+        <span id="more">
+          We offer services with the highest quality and we take the best shots
+          of your choice.
+          <br /><br />
+          <span id="fx">
+            Photographers of Fotograpiya are given training on using the latest
+            technology when it comes to Cameras, Video Recorders, and Photo
+            Manipulating Applications.
+            <br /><br />
+            This is to ensure the best quality of your shots.
+          </span>
+        </span>
+      </p>
+
+      <div>
+        <button class="button" onclick="appear()" id="myBtn">Read more</button>
+      </div>
+    </div>
+    <div class="space"></div>
+    <div class="details" style="background-color: powderblue">
+      <p>We offer services such as:</p>
+      <div class="flexcon">
+        <div class="card">
+          <img src="assets/popAlds.jpg" alt="Avatar" />
+          <div class="container">
+            <h4><b>Photomanipulation Services</b></h4>
+            <a href="services.html" class="button">Know more!</a>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="assets/landscapeAlds6.jpg"
+            alt="Avatar"
+            style="width: 100%"
+          />
+          <div class="container">
+            <h4><b>Landscape Photography Services</b></h4>
+            <a href="services.html" class="button">Know more!</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/faustino.jpg" alt="Avatar" />
+          <div class="container">
+            <h4><b>Portrait Photography Services</b></h4>
+            <a href="services.html" class="button">Know more!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space2"></div>
+    <div
+      class="cbox"
+      style="
+        margin: 0px 1% 0 1%;
+        background-color: powderblue;
+        color: black;
+        box-shadow: 0 0 5px black;
+      "
+    >
+      <p class="contactfont1">Find us!</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1364.2349914963445!2d121.03914779388988!3d14.732976165656263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b05166adbe09%3A0xee21c25d467b61d0!2sFotographia%20Digital%20Photo%20Studio!5e0!3m2!1sen!2sph!4v1601195007372!5m2!1sen!2sph"
+        class="map"
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </div>
+  </body>
+</html>

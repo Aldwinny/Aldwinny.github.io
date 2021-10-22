@@ -1,2 +1,9 @@
-.vscode/settings.json
+#vscode
+.vscode/
+
+#computer
 ref/reference & citation.txt
+
+#unimplemented
+outed.css
+assets/logos/
