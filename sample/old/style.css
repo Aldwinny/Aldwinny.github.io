@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Bahnschrift Regular";
-  src: url("fonts/bahnschrift/Bahnschrift.woff");
+  src: url("/fonts/bahnschrift/Bahnschrift.woff");
 }
 
 @font-face {
   font-family: "Gotham medium";
-  src: url("fonts/gotham-medium/Gotham-Medium.woff");
+  src: url("/fonts/gotham-medium/Gotham-Medium.woff");
 }
 
 @font-face {
   font-family: "Nexa Bold";
-  src: url("fonts/nexa/Nexa-Bold.woff");
+  src: url("/fonts/nexa/Nexa-Bold.woff");
 }
 
 @font-face {
   font-family: "Nexa Light";
-  src: url("fonts/nexa/Nexa-Light.woff");
+  src: url("/fonts/nexa/Nexa-Light.woff");
 }
 
 body {
