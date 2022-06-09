@@ -1,3 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --bg-color: #14142f;
+  --bg-color-2: #221d30;
+
+  --primary-text: #fff;
+  --primary-colored-text: #efd758;
+  --secondary-text: #979797;
+}
+
 body {
-    margin: 0;
+  background: var(--bg-color);
+  color: var(--primary-text);
+  margin: 10px 30px;
+
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  color: var(--primary-text);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
+nav a {
+  margin: 0 20px;
+  font-size: 1.2rem;
+}
+
+nav a:first-of-type {
+  margin-left: auto;
+}
+
+section {
+  width: 100%;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+section > div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.line {
+  background-color: var(--primary-text);
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 4px;
+  height: 100vh;
+}
+
+.mob-area,
+.web-area {
+  width: 50%;
+  margin: auto 10px;
+
+  font-size: 1.5em;
+}
+
+.mob-area h2 {
+  text-align: left;
+}
+
+.web-area h2 {
+  text-align: right;
+}
+
+span.job {
+  color: var(--primary-colored-text);
+  animation: color-change-by 500ms ease-in infinite;
+}
+
+@keyframes color-change-by {
+  50% {
+    color: var(--primary-colored-text);
+  }
+  100% {
+    color: var(--primary-text);
+  }
 }
