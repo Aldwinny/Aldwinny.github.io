@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&display=swap");
 
 :root {
   --bg-color: #14142f;
@@ -7,6 +7,9 @@
   --primary-text: #fff;
   --primary-colored-text: #efd758;
   --secondary-text: #979797;
+
+  --primary-font: "Nunito", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
 }
 
 body {
@@ -14,7 +17,11 @@ body {
   color: var(--primary-text);
   margin: 10px 30px;
 
-  font-family: "Nunito", sans-serif;
+  font-family: var(--primary-font);
+
+  /* TODO: TEMPORARY */
+  height: 125vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -40,21 +47,65 @@ nav a:first-of-type {
   margin-left: auto;
 }
 
-section {
+section.intro {
+  margin: 3% 30% 10% 5%;
+}
+
+section.intro h1 {
+  font-size: 3em;
+  margin: 14% 0 2% 0;
+}
+
+section.intro h2 {
+  color: var(--secondary-text);
+  font-family: var(--secondary-font);
+
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+section.projects {
   width: 100%;
 }
 
-section h1 {
+section.projects h1 {
   text-align: center;
   font-size: 3em;
   margin-bottom: 0;
 }
 
-section > div {
+section.projects > div:last-child {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
+
+section.projects-animate .line {
+  animation: height-change 1s ease forwards;
+}
+
+section.projects-animate .mob-area h2 {
+  animation: entry-mob-dev 500ms ease 1s forwards;
+}
+
+section.projects-animate .web-area h2 {
+  animation: entry-web-dev 500ms ease 1s forwards;
+}
+
+section.projects-exit .mob-area h2 {
+  animation: exit-mob-dev 500ms ease forwards;
+}
+
+section.projects-exit .web-area h2 {
+  animation: exit-web-dev 500ms ease forwards;
+}
+
+section.projects-exit .line {
+  height: 100vh;
+  animation: exit-height-change 1s ease 500ms forwards;
+}
+
+/* TODO: IMPLEMENT EXIT ANIMATION */
 
 .line {
   background-color: var(--primary-text);
@@ -67,7 +118,6 @@ section > div {
   margin-right: auto;
 
   width: 4px;
-  height: 100vh;
 }
 
 .mob-area,
@@ -80,15 +130,21 @@ section > div {
 
 .mob-area h2 {
   text-align: left;
+  opacity: 0;
 }
 
 .web-area h2 {
   text-align: right;
+  opacity: 0;
 }
 
 span.job {
   color: var(--primary-colored-text);
   animation: color-change-by 500ms ease-in infinite;
+}
+
+span.highlight {
+  color: var(--primary-colored-text);
 }
 
 @keyframes color-change-by {
@@ -97,5 +153,73 @@ span.job {
   }
   100% {
     color: var(--primary-text);
+  }
+}
+
+/* Single use animations */
+
+@keyframes height-change {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+@keyframes entry-web-dev {
+  0% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entry-mob-dev {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Single use exit animations */
+
+@keyframes exit-height-change {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0vh;
+  }
+}
+
+@keyframes exit-web-dev {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+@keyframes exit-mob-dev {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
 }
