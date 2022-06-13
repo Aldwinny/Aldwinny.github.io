@@ -66,6 +66,7 @@ section.intro h2 {
 
 section.projects {
   width: 100%;
+  height: 120vh;
 }
 
 section.projects h1 {
