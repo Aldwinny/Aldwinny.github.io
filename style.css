@@ -15,7 +15,6 @@
 body {
   background: var(--bg-color);
   color: var(--primary-text);
-  margin: 10px 30px;
 
   font-family: var(--primary-font);
 
@@ -34,8 +33,9 @@ nav {
   justify-content: center;
   align-items: center;
 
+  margin: 10px 30px;
+
   font-size: 1.5em;
-  padding: 0 10px;
 }
 
 nav a {
@@ -75,7 +75,7 @@ section.projects h1 {
   margin-bottom: 0;
 }
 
-section.projects > div:last-child {
+section.projects > :nth-child(3) {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -139,6 +139,25 @@ section.projects-exit .line {
   opacity: 0;
 }
 
+.proj-btn {
+  display: none;
+
+  position: fixed;
+  z-index: 2;
+
+  border: none;
+  text-decoration: none;
+  border-radius: 50% 50% 0 50%;
+
+  height: 70px;
+  width: 70px;
+
+  bottom: 0;
+  right: 0;
+
+  transition: 1s all ease;
+}
+
 span.job {
   color: var(--primary-colored-text);
   animation: color-change-by 500ms ease-in infinite;
@@ -146,6 +165,56 @@ span.job {
 
 span.highlight {
   color: var(--primary-colored-text);
+}
+
+@media only screen and (max-width: 650px) {
+  .mob-area,
+  .web-area {
+    display: none;
+  }
+
+  .mob-area.active {
+    display: block;
+  }
+
+  .mob-area h2 {
+    text-align: center;
+  }
+
+  .web-area.active {
+    display: block;
+  }
+
+  section.projects-animate .mob-area h2 {
+    animation: entry-mob-dev 500ms ease forwards;
+  }
+
+  section.projects-animate .web-area h2 {
+    animation: entry-web-dev 500ms ease forwards;
+  }
+
+  section.projects-exit .mob-area h2 {
+    animation: exit-mob-dev 500ms ease forwards;
+  }
+
+  section.projects-exit .web-area h2 {
+    animation: exit-web-dev 500ms ease forwards;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .proj-btn {
+    display: block;
+
+    right: 0;
+  }
+
+  .proj-btn.web {
+    border-radius: 50% 50% 50% 0;
+    right: calc(100% - 70px);
+  }
 }
 
 @keyframes color-change-by {

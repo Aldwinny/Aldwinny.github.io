@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/wiz.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
 
+    <!-- Google's Material Symbols  -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <link rel="icon" href="/assets/wiz.png" />
     <link rel="stylesheet" href="style.css" />
     <script src="/script.js"></script>
     <title>Welcome! | Aldwin's Website</title>
@@ -28,13 +37,12 @@
         solving problems.
       </h2>
       <a>More about me <span>></span></a>
-      <button onclick="toggleanimate()">TEST BUTTON HEHE</button>
     </section>
     <section class="projects">
       <h1>I AM YOUR</h1>
       <div class="line"></div>
       <div>
-        <div class="mob-area">
+        <div class="mob-area active">
           <h2><span class="job">Mobile</span><br />Developer</h2>
         </div>
         <div class="web-area">
@@ -42,5 +50,8 @@
         </div>
       </div>
     </section>
+    <button type="button" class="proj-btn" onclick="toggleProjectsContent()">
+      <span class="material-symbols-outlined"> computer </span>
+    </button>
   </body>
 </html>
