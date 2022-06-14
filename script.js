@@ -58,24 +58,30 @@ function toggleProjectsContent() {
   if (btn.classList.contains("web")) {
     btn.children[0].innerText = "smartphone";
 
-    ani.classList.add("projects-exit");
-    timeout = setTimeout(() => {
-      removeProjectsAnimation(ani);
-      ani.classList.add("projects-animate");
-      mobi.classList.remove("active");
-      web.classList.add("active");
-    }, 500);
+    toggleProjectsAnimate(ani, mobi, web);
   } else {
     btn.children[0].innerText = "computer";
 
-    ani.classList.add("projects-exit");
-    timeout = setTimeout(() => {
-      removeProjectsAnimation(ani);
-      ani.classList.add("projects-animate");
-      web.classList.remove("active");
-      mobi.classList.add("active");
-    }, 500);
+    toggleProjectsAnimate(ani, web, mobi);
   }
+}
+
+function toggleProjectsAnimate(ani, a, b) {
+  ani.classList.add("projects-exit");
+
+  if (!ani.classList.contains("projects-animate")) {
+    a.classList.remove("active");
+    b.classList.add("active");
+    return;
+  }
+
+  timeout = setTimeout(() => {
+    removeProjectsAnimation(ani);
+
+    ani.classList.add("projects-animate");
+    a.classList.remove("active");
+    b.classList.add("active");
+  }, 500);
 }
 
 document.addEventListener("scroll", toggleProjects);
