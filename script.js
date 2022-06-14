@@ -67,13 +67,13 @@ function toggleProjectsContent() {
 }
 
 function toggleProjectsAnimate(ani, a, b) {
-  ani.classList.add("projects-exit");
-
   if (!ani.classList.contains("projects-animate")) {
     a.classList.remove("active");
     b.classList.add("active");
     return;
   }
+
+  ani.classList.add("projects-exit");
 
   timeout = setTimeout(() => {
     removeProjectsAnimation(ani);
