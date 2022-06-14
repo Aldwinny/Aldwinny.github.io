@@ -173,15 +173,13 @@ span.highlight {
     display: none;
   }
 
-  .mob-area.active {
-    display: block;
-  }
-
-  .mob-area h2 {
+  .mob-area h2,
+  .web-area h2 {
     text-align: center;
   }
 
-  .web-area.active {
+  .web-area.active,
+  .mob-area.active {
     display: block;
   }
 

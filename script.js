@@ -47,14 +47,34 @@ function onWindowResize() {
 }
 
 function toggleProjectsContent() {
-  let ani = document.getElementsByClassName("projects")[0];
-  let btn = document.getElementsByClassName("proj-btn")[0];
+  let ani = document.querySelectorAll(".projects")[0];
+
+  let mobi = document.querySelector("#mob-area");
+  let web = document.querySelector("#web-area");
+
+  let btn = document.querySelectorAll(".proj-btn")[0];
 
   btn.classList.toggle("web");
   if (btn.classList.contains("web")) {
     btn.children[0].innerText = "smartphone";
+
+    ani.classList.add("projects-exit");
+    timeout = setTimeout(() => {
+      removeProjectsAnimation(ani);
+      ani.classList.add("projects-animate");
+      mobi.classList.remove("active");
+      web.classList.add("active");
+    }, 500);
   } else {
     btn.children[0].innerText = "computer";
+
+    ani.classList.add("projects-exit");
+    timeout = setTimeout(() => {
+      removeProjectsAnimation(ani);
+      ani.classList.add("projects-animate");
+      web.classList.remove("active");
+      mobi.classList.add("active");
+    }, 500);
   }
 }
 
