@@ -96,19 +96,19 @@ section.projects-animate .line {
 }
 
 section.projects-animate .mob-area > * {
-  animation: entry-mob-dev 500ms ease 1s forwards;
+  animation: entry-mob-dev 500ms ease 1s both;
 }
 
 section.projects-animate .web-area > * {
-  animation: entry-web-dev 500ms ease 1s forwards;
+  animation: entry-web-dev 500ms ease 1s both;
 }
 
 section.projects-exit .mob-area > * {
-  animation: exit-mob-dev 500ms ease forwards;
+  animation: exit-mob-dev 500ms ease both;
 }
 
 section.projects-exit .web-area > * {
-  animation: exit-web-dev 500ms ease forwards;
+  animation: exit-web-dev 500ms ease both;
 }
 
 section.projects-exit .line {
@@ -168,7 +168,7 @@ section.projects-exit .line {
   bottom: 0;
   right: 0;
 
-  transition: 1s all ease;
+  transition: 1s ease;
 }
 
 span.job {
@@ -185,12 +185,11 @@ span.highlight {
   width: 85%;
 
   border-radius: 10px;
-  padding: 5px 10px;
   margin: 40px 0;
 
   display: flex;
 
-  transition: 500ms all ease;
+  transition: 500ms ease;
 }
 
 .mob-area .text-card,
@@ -266,7 +265,6 @@ span.highlight {
 }
 
 /* LVL: 6 - MEDIA QUERIES */
-
 @media screen and (pointer: fine) and (min-width: 1300px) {
   .mob-area .text-card:hover,
   .mob-area .text-card-2:hover {
@@ -323,19 +321,19 @@ span.highlight {
   }
 
   section.projects-animate .mob-area > * {
-    animation: entry-mob-dev 500ms ease forwards;
+    animation: entry-mob-dev 500ms both;
   }
 
   section.projects-animate .web-area > * {
-    animation: entry-web-dev 500ms ease forwards;
+    animation: entry-web-dev 500ms both;
   }
 
   section.projects-exit .mob-area > * {
-    animation: exit-mob-dev 500ms ease forwards;
+    animation: exit-mob-dev 500ms both;
   }
 
   section.projects-exit .web-area > * {
-    animation: exit-web-dev 500ms ease forwards;
+    animation: exit-web-dev 500ms both;
   }
 
   .line {
@@ -402,7 +400,7 @@ span.highlight {
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: initial;
   }
 }
 
@@ -413,7 +411,7 @@ span.highlight {
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: initial;
   }
 }
 
@@ -431,7 +429,7 @@ span.highlight {
 @keyframes exit-web-dev {
   0% {
     opacity: 1;
-    transform: translateX(0);
+    transform: initial;
   }
 
   100% {
@@ -443,7 +441,7 @@ span.highlight {
 @keyframes exit-mob-dev {
   0% {
     opacity: 1;
-    transform: translateX(0);
+    transform: initial;
   }
 
   100% {
