@@ -95,19 +95,19 @@ section.projects-animate .line {
   animation: height-change 1s ease forwards;
 }
 
-section.projects-animate .mob-area > h2 {
+section.projects-animate .mob-area > * {
   animation: entry-mob-dev 500ms ease 1s forwards;
 }
 
-section.projects-animate .web-area > h2 {
+section.projects-animate .web-area > * {
   animation: entry-web-dev 500ms ease 1s forwards;
 }
 
-section.projects-exit .mob-area > h2 {
+section.projects-exit .mob-area > * {
   animation: exit-mob-dev 500ms ease forwards;
 }
 
-section.projects-exit .web-area > h2 {
+section.projects-exit .web-area > * {
   animation: exit-web-dev 500ms ease forwards;
 }
 
@@ -139,14 +139,17 @@ section.projects-exit .line {
   font-size: 1.5em;
 }
 
+.mob-area > *,
+.web-area > * {
+  opacity: 0;
+}
+
 .mob-area > h2 {
   text-align: left;
-  opacity: 0;
 }
 
 .web-area > h2 {
   text-align: right;
-  opacity: 0;
 }
 
 .proj-btn {
@@ -181,13 +184,20 @@ span.highlight {
 .text-card-2 {
   width: 85%;
 
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 5px 10px;
   margin: 40px 0;
 
   display: flex;
 
   transition: 500ms all ease;
+}
+
+.mob-area .text-card,
+.mob-area .text-card-2 {
+  margin-right: auto;
+
+  flex-direction: row;
 }
 
 .web-area .text-card,
@@ -199,13 +209,7 @@ span.highlight {
 
 .text-card:hover,
 .text-card-2:hover {
-  transform: translateX(20px);
   cursor: pointer;
-}
-
-.web-area .text-card:hover,
-.web-area .text-card-2:hover {
-  transform: translateX(-20px);
 }
 
 .text-card h2,
@@ -247,7 +251,7 @@ span.highlight {
   background: -webkit-linear-gradient(to right, #cc2b5e, #753a88);
   background: linear-gradient(to right, #cc2b5e, #753a88);
 
-  padding: 20px;
+  padding: 15px;
   color: var(--primary-text);
 }
 
@@ -257,11 +261,23 @@ span.highlight {
   background: -webkit-linear-gradient(to right, #42275a, #734b6d);
   background: linear-gradient(to right, #42275a, #734b6d);
 
-  padding: 20px;
+  padding: 15px;
   color: var(--primary-text);
 }
 
 /* LVL: 6 - MEDIA QUERIES */
+
+@media screen and (pointer: fine) and (min-width: 1300px) {
+  .mob-area .text-card:hover,
+  .mob-area .text-card-2:hover {
+    transform: translateX(20px);
+  }
+
+  .web-area .text-card:hover,
+  .web-area .text-card-2:hover {
+    transform: translateX(-20px);
+  }
+}
 
 @media not screen and (pointer: fine), screen and (max-width: 1300px) {
   .mob-area > h2,
@@ -306,19 +322,19 @@ span.highlight {
     display: block;
   }
 
-  section.projects-animate .mob-area > h2 {
+  section.projects-animate .mob-area > * {
     animation: entry-mob-dev 500ms ease forwards;
   }
 
-  section.projects-animate .web-area > h2 {
+  section.projects-animate .web-area > * {
     animation: entry-web-dev 500ms ease forwards;
   }
 
-  section.projects-exit .mob-area > h2 {
+  section.projects-exit .mob-area > * {
     animation: exit-mob-dev 500ms ease forwards;
   }
 
-  section.projects-exit .web-area > h2 {
+  section.projects-exit .web-area > * {
     animation: exit-web-dev 500ms ease forwards;
   }
 
