@@ -1,17 +1,29 @@
-let timeout;
+let mobi;
+let web;
+let btn;
+let ani;
 
 const CSS_ANIMATION_DELAY = 1100;
 const CSS_DELAY_SEQUENCE = 200;
+
+let timeout;
+let is_switching = false;
+
+function visit(link, isNewTab) {
+  if (isNewTab ?? false) window.open(link);
+  else location.href = link;
+}
 
 /**
  * Function that toggles animation classes for certain
  */
 function toggleProjects() {
-  let ani = document.getElementsByClassName("projects")[0];
-
   let scrollAt = ani.getBoundingClientRect().top + 100;
-
   if (scrollY > scrollAt) {
+    if (is_switching) {
+      return;
+    }
+
     if (ani.classList.contains("projects-exit")) {
       if (timeout != null) {
         clearTimeout(timeout);
@@ -34,8 +46,24 @@ function toggleProjects() {
         } else {
           timeout = setTimeout(() => removeProjectsAnimation(ani), 1500);
         }
+      } else {
+        if (is_switching) {
+          clearTimeout(timeout);
+          removeProjectsAnimation(ani);
+          applyAnimationDelay();
+          switchActiveProject();
+        }
+        is_switching = false;
       }
     }
+  }
+}
+
+function switchActiveProject() {
+  if (btn.classList.contains("web")) {
+    toggleProjectsAnimate(ani, mobi, web);
+  } else {
+    toggleProjectsAnimate(ani, web, mobi);
   }
 }
 
@@ -45,13 +73,6 @@ function removeProjectsAnimation(ani) {
 }
 
 function toggleProjectsContent() {
-  let ani = document.querySelectorAll(".projects")[0];
-
-  let mobi = document.querySelector("#mob-area");
-  let web = document.querySelector("#web-area");
-
-  let btn = document.querySelectorAll(".proj-btn")[0];
-
   btn.classList.toggle("web");
   if (btn.classList.contains("web")) {
     btn.children[0].innerText = "smartphone";
@@ -71,6 +92,8 @@ function toggleProjectsAnimate(ani, a, b) {
     return;
   }
 
+  is_switching = true;
+
   applyAnimationDelay(0, 0);
   ani.classList.add("projects-exit");
 
@@ -82,20 +105,16 @@ function toggleProjectsAnimate(ani, a, b) {
 
     a.classList.remove("active");
     b.classList.add("active");
+    is_switching = false;
   }, 500);
 }
 
 function applyAnimationDelay(additional, delayForEach) {
-  let [mob, web] = [
-    document.querySelector("#mob-area"),
-    document.querySelector("#web-area"),
-  ];
-
   let mob_divs = document.querySelectorAll(
-    "#mob-area > div.text-card, #mob-area > div.text-card-2"
+    "#mob-area > div.tc-container, #mob-area > div.tc-container-2"
   );
   let web_divs = document.querySelectorAll(
-    "#web-area > div.text-card, #web-area > div.text-card-2"
+    "#web-area > div.tc-container, #web-area > div.tc-container-2"
   );
 
   for (let i = 0; i < mob_divs.length; i++) {
@@ -115,6 +134,10 @@ function applyAnimationDelay(additional, delayForEach) {
 
 function init() {
   document.addEventListener("DOMContentLoaded", () => {
+    mobi = document.querySelector("#mob-area");
+    web = document.querySelector("#web-area");
+    btn = document.querySelectorAll(".proj-btn")[0];
+    ani = document.querySelectorAll(".projects")[0];
     applyAnimationDelay();
   });
 
