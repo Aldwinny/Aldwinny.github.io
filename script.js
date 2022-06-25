@@ -111,10 +111,10 @@ function toggleProjectsAnimate(ani, a, b) {
 
 function applyAnimationDelay(additional, delayForEach) {
   let mob_divs = document.querySelectorAll(
-    "#mob-area > div.tc-container, #mob-area > div.tc-container-2"
+    "#mob-area div.tc-container, #mob-area div.tc-container-2"
   );
   let web_divs = document.querySelectorAll(
-    "#web-area > div.tc-container, #web-area > div.tc-container-2"
+    "#web-area div.tc-container, #web-area div.tc-container-2"
   );
 
   for (let i = 0; i < mob_divs.length; i++) {
