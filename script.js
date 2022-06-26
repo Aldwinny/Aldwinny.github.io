@@ -3,10 +3,13 @@ let web;
 let btn;
 let ani;
 
+let tech;
+
 const CSS_ANIMATION_DELAY = 1100;
 const CSS_DELAY_SEQUENCE = 200;
 
 let timeout;
+let timeout_tech;
 let is_switching = false;
 
 function visit(link, isNewTab) {
@@ -18,7 +21,7 @@ function visit(link, isNewTab) {
  * Function that toggles animation classes for certain
  */
 function toggleProjects() {
-  let scrollAt = ani.getBoundingClientRect().top + 100;
+  let scrollAt = ani.getBoundingClientRect().top + 300;
   if (scrollY > scrollAt) {
     if (is_switching) {
       return;
@@ -59,6 +62,41 @@ function toggleProjects() {
   }
 }
 
+function toggleTech() {
+  let scrollAt = tech.getBoundingClientRect().top + 900;
+
+  if (scrollY > scrollAt) {
+    if (tech.classList.contains("tech-exit")) {
+      if (timeout_tech != null) {
+        clearTimeout(timeout_tech);
+        timeout_tech = null;
+      }
+      tech.classList.remove("tech-exit");
+      tech.classList.remove("tech-animate");
+    }
+
+    tech.classList.add("tech-animate");
+  } else {
+    if (tech.classList.contains("tech-animate")) {
+      tech.classList.add("tech-exit");
+      if (timeout_tech == null) {
+        if (window.innerWidth < 650) {
+          timeout_tech = setTimeout(
+            () => removeProjectsAnimation(tech, "tech-exit"),
+            500
+          );
+        } else {
+          timeout_tech = setTimeout(
+            () => removeProjectsAnimation(tech, "tech-animate"),
+            1500
+          );
+        }
+      } else {
+      }
+    }
+  }
+}
+
 function switchActiveProject() {
   if (btn.classList.contains("web")) {
     toggleProjectsAnimate(ani, mobi, web);
@@ -67,9 +105,9 @@ function switchActiveProject() {
   }
 }
 
-function removeProjectsAnimation(ani) {
-  ani.classList.remove("projects-exit");
-  ani.classList.remove("projects-animate");
+function removeProjectsAnimation(ani, str) {
+  ani.classList.remove(str ?? "projects-exit");
+  ani.classList.remove(str ?? "projects-animate");
 }
 
 function toggleProjectsContent() {
@@ -138,10 +176,13 @@ function init() {
     web = document.querySelector("#web-area");
     btn = document.querySelectorAll(".proj-btn")[0];
     ani = document.querySelectorAll(".projects")[0];
+
+    tech = document.querySelector("#tech");
     applyAnimationDelay();
   });
 
   document.addEventListener("scroll", toggleProjects);
+  document.addEventListener("scroll", toggleTech);
 }
 
 init();

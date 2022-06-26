@@ -15,6 +15,10 @@
   --secondary-font: "Open Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-color);
   color: var(--primary-text);
@@ -93,10 +97,6 @@ section.projects > :nth-child(3) {
   align-items: baseline;
 }
 
-section.projects-animate .line {
-  animation: height-change 1s ease forwards;
-}
-
 section.projects-animate .mob-area > * {
   animation: entry-mob-dev 500ms ease 1s both;
 }
@@ -111,6 +111,10 @@ section.projects-exit .mob-area > * {
 
 section.projects-exit .web-area > * {
   animation: exit-web-dev 500ms ease both;
+}
+
+section.projects-animate .line {
+  animation: height-change 1s ease forwards;
 }
 
 section.projects-exit .line {
@@ -131,7 +135,7 @@ section.tech {
   font-size: 2em;
 }
 
-section.tech div.icon-container {
+section.tech .icon-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -140,12 +144,12 @@ section.tech div.icon-container {
   justify-content: center;
 }
 
-section.tech div.icon-container .break {
+section.tech .icon-container .break {
   flex-basis: 100%;
   height: 0;
 }
 
-section.tech div.icon-container .icon {
+section.tech .icon-container .icon {
   margin: 10px;
 
   /* TEMPORARY */
@@ -153,6 +157,27 @@ section.tech div.icon-container .icon {
   height: 120px;
 
   filter: sepia(100%) saturate(300%) brightness(25%) hue-rotate(170deg);
+}
+
+section.tech h1,
+section.tech .icon-container {
+  opacity: 0;
+}
+
+section.tech-animate h1 {
+  animation: entry-mob-dev 500ms ease both;
+}
+
+section.tech-exit h1 {
+  animation: exit-mob-dev 500ms ease both;
+}
+
+section.tech-animate .icon-container {
+  animation: fadeIn 500ms ease both;
+}
+
+section.tech-exit .icon-container {
+  animation: fadeOut 500ms ease both;
 }
 
 /* LVL 5.2 - ABOUT ME */
@@ -341,13 +366,13 @@ span.highlight {
 }
 
 @media screen and (max-width: 1300px) {
+  section.projects-animate .line {
+    animation: height-change-lg 1s ease forwards;
+  }
+
   section.projects-exit .line {
     height: 990px;
     animation: exit-height-change-lg 1s ease 500ms forwards;
-  }
-
-  section.projects-animate .line {
-    animation: height-change-lg 1s ease forwards;
   }
 }
 
@@ -459,6 +484,24 @@ span.highlight {
 }
 
 /* Single use animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 @keyframes height-change {
   0% {
