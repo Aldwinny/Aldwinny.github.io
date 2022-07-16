@@ -180,7 +180,9 @@ section.tech .icon-container .icon {
   width: 100px;
   height: 120px;
 
-  filter: sepia(100%) saturate(300%) brightness(25%) hue-rotate(170deg);
+  image-rendering: crisp-edges;
+
+  /* filter: sepia(100%) saturate(300%) brightness(25%) hue-rotate(170deg); */
 }
 
 section.tech h1,
