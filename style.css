@@ -54,10 +54,34 @@ nav {
 nav a {
   margin: 0 20px;
   font-size: 1.2rem;
+
+  transition-duration: 250ms;
+  position: relative;
 }
 
 nav a:first-of-type {
   margin-left: auto;
+}
+
+nav a:hover {
+  color: #c475df;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 3px;
+  width: 100%;
+  opacity: 0;
+  background-color: #c475df;
+
+  transition-duration: 500ms;
+}
+
+nav a:hover::before {
+  content: "";
+  opacity: 1;
 }
 
 /* LVL: 4 - INTRODUCTION SECTION */
@@ -400,6 +424,18 @@ span.highlight {
     width: 60%;
 
     margin: 15px auto;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  nav {
+    font-size: 1em;
+    margin: 15px 20px;
+  }
+
+  nav a {
+    margin: 0 2vw;
+    font-size: 1rem;
   }
 }
 
