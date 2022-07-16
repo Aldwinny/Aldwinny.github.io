@@ -565,8 +565,8 @@ span.highlight {
     margin-right: 0;
   }
 
-  nav a:last-of-type {
-    margin-top: 20px;
+  nav a {
+    margin-top: 20px !important;
   }
 
   .tc-container,
