@@ -11,6 +11,8 @@
   --primary-colored-text: #efd758;
   --secondary-text: #979797;
 
+  --highlight-color: #c475df;
+
   --primary-font: "Nunito", sans-serif;
   --secondary-font: "Open Sans", sans-serif;
 }
@@ -64,7 +66,7 @@ nav a:first-of-type {
 }
 
 nav a:hover {
-  color: #c475df;
+  color: var(--highlight-color);
 }
 
 nav a::before {
@@ -74,7 +76,7 @@ nav a::before {
   height: 3px;
   width: 100%;
   opacity: 0;
-  background-color: #c475df;
+  background-color: var(--highlight-color);
 
   transition-duration: 500ms;
 }
@@ -439,9 +441,59 @@ span.highlight {
     margin: 0 2vw;
     font-size: 1rem;
   }
+
+  section.intro {
+    margin: 3% 20% 10% 5%;
+  }
+
+  section.intro > h1 {
+    font-size: 1.5em;
+  }
+
+  section.intro > h2 {
+    margin-right: 30%;
+  }
 }
 
 @media only screen and (max-width: 650px) {
+  nav {
+    flex-wrap: wrap;
+    font-size: 1.3em;
+  }
+
+  nav > p {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 20px 0 5% 0;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+  }
+
+  nav a:first-of-type {
+    margin: 0 2vw;
+  }
+
+  nav a::before {
+    opacity: 1;
+    background-color: var(--primary-text);
+
+    transition-duration: 250ms;
+  }
+
+  nav a:hover::before {
+    background-color: var(--highlight-color);
+  }
+
+  section.intro {
+    margin: 20% 10% 20% 5%;
+  }
+
+  section.intro > h1 {
+    font-size: 1.7em;
+  }
+
   .mob-area,
   .web-area {
     display: none;
@@ -504,6 +556,19 @@ span.highlight {
 }
 
 @media only screen and (max-width: 300px) {
+  section.intro {
+    text-align: center;
+    margin: 20% 5% 20% 5%;
+  }
+
+  section.intro > h2 {
+    margin-right: 0;
+  }
+
+  nav a:last-of-type {
+    margin-top: 20px;
+  }
+
   .tc-container,
   .tc-container-2 {
     height: 100%;
