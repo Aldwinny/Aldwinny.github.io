@@ -275,6 +275,9 @@ footer {
   bottom: 0;
   right: 0;
 
+  background-color: #753a88;
+  color: var(--primary-text);
+
   transition: 1s ease;
 }
 
@@ -538,8 +541,18 @@ span.highlight {
   }
 
   .proj-btn.web {
+    background-color: #cc2b5e;
+    color: var(--bg-color);
     border-radius: 50% 50% 50% 0;
     right: calc(100% - 70px);
+  }
+
+  .proj-btn.web.hidden {
+    right: 100%;
+  }
+
+  .proj-btn.hidden {
+    right: -70px;
   }
 
   .text-card > figure,
