@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="/sample/old/style.css" />
     <title>404 | You're lost</title>
     <style>
+      :root {
+        --bg-color: #000012;
+      }
+
+      body,
+      .navbar {
+        background: var(--bg-color);
+      }
+
       .link2 {
         transition: 0.3s;
         color: yellow;
@@ -70,7 +79,7 @@
         <p class="title">Aldwin's Portfolio</p>
       </div>
       <div class="navi" style="margin-left: auto">
-        <a href="/sample/old/index.html" class="title"> Home </a>
+        <a href="/" class="title"> Home </a>
       </div>
     </nav>
 
@@ -79,7 +88,8 @@
       <p class="headTitle2">Guess what? You're lost.</p>
       <p class="headTitle2">It's fine to stray away from the path</p>
       <p class="headTitle2" style="margin-bottom: 20vh">
-        But maybe you should go <a href="/sample/old/index.html" class="link2">back</a>
+        But maybe you should go
+        <a href="/" class="link2">back</a>
       </p>
     </header>
 
@@ -97,12 +107,6 @@
             <img src="/assets/linklogos/github.png" />
           </a>
         </div>
-        <br />
-        <p>
-          <span style="font-size: 1.3rem">
-            Also this website is still under construction!
-          </span>
-        </p>
       </div>
     </footer>
   </body>

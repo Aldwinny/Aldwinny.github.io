@@ -395,6 +395,19 @@ span.highlight {
   color: white;
 }
 
+.link-move {
+  transition: 50ms;
+}
+
+.link-move:hover {
+  margin-left: 10px;
+  color: #b752e6;
+}
+
+.link-move:active {
+  color: #9841c0;
+}
+
 /* LVL: 6 - MEDIA QUERIES SECTION */
 @media screen and (pointer: fine) and (min-width: 1300px) {
   .mob-area .text-card:hover,
