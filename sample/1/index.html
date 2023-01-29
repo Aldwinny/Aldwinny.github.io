@@ -3,24 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Movies & More</title>
+    <link rel="preload" href="./text.css" as="style" />
+    <link rel="preload" href="./Assets/logo/logo-titled.PNG" as="image" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./text.css" />
+    <script src="./script.js"></script>
+    <link
+      rel="icon"
+      href="./Assets/logo/icon-192x.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./Assets/logo/icon-256x.png"
+      sizes="256x256"
+      type="image/png"
+    />
+    <title>Home | Spearworks Interactive</title>
   </head>
   <body>
-    <nav class="navbar">
-      <a class="text" id="fx">Remote.</a>
-      <a class="text">Sign up</a>
-      <a class="text">Log in</a>
-    </nav>
+    <header>
+      <div class="header">
+        <div class="container-center">
+          <nav class="navbar">
+            <div>
+              <img src="./Assets/logo/logo-titled.PNG" class="logo" />
+            </div>
+            <!-- For screen Size < 500px -->
+            <div class="barContainer" onclick="menuBar(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <div><a href="" target="_blank" class="link">Contact us!</a></div>
+            <div>|</div>
+            <div><a href="" target="_blank" class="link">The team</a></div>
+          </nav>
+        </div>
+      </div>
+    </header>
 
-    <section>
-      <div class="filler">
-        <p class="text2">This is a couch and so are you</p>
-        <div class="search">
-          <input placeholder="Find movies.." />
-          <button>🔍</button>
+    <section class="bg-white">
+      <div class="txtContainer">
+        <div class="headText2">SPEARWORKS INTERACTIVE</div>
+        <div class="bodyText text-center">
+          Aiming for the best of the best. Spearheading the Gaming Industry.
+        </div>
+      </div>
+      <div class="line bg-red"></div>
+      <div class="txtContainer">
+        <div class="headText">NEWS</div>
+        <div class="news">
+          <div>
+            <img src="https://via.placeholder.com/400x300.png" />
+            <div>Dip-shift release!</div>
+            <div>Coming soon!</div>
+            <a href=""></a>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/400x300.png" />
+            <div>I did this one weird trick</div>
+            <div>It was very cool..</div>
+            <a href=""></a>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/400x300.png" />
+            <div>Title</div>
+            <div>Description</div>
+            <a href=""></a>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="bg-red">
+      <div class="txtContainer">
+        <div class="line bg-white"></div>
+
+        <div class="headText">GAMES</div>
+        <div class="news">
+          <div>
+            <img src="https://via.placeholder.com/400x300.png" />
+            <div>Dip-Shift</div>
+            <div>Dip into the colors</div>
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black">
+      <div class="txtContainer">
+        <div class="line bg-white"></div>
+        <div class="headText">THE TEAM</div>
+        <div class="flex">
+          <div>
+            <img src="./Assets/team/Jaynard Pimentel.jpg" />
+            <div>Jaynard Pimentel</div>
+            <div style="color: wheat">Director</div>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/150.png" />
+            <div>Andrew</div>
+            <div style="color: wheat">Director</div>
+          </div>
+          <div>
+            <img src="./Assets/team/Janelle Obligado.jpg" />
+            <div>Janelle Obligado</div>
+            <div style="color: rgb(226, 2, 226)">Designer</div>
+          </div>
+          <div>
+            <img src="./Assets/team/Jeremy Louis Hara.jpg" />
+            <div>Jeremy Louis Hara</div>
+            <div style="color: rgb(226, 2, 226)">Designer</div>
+          </div>
+          <div>
+            <img src="./Assets/team/Terence Villanueva.jpg" />
+            <div>Terence Villanueva</div>
+            <div style="color: rgb(226, 2, 226)">Designer</div>
+          </div>
+          <div>
+            <img src="./Assets/team/Aivan Tuquero.png" />
+            <div>Aivan Tuquero</div>
+            <div style="color: red">Developer</div>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/150.png" />
+            <div>Aldwin</div>
+            <div style="color: red">Developer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Temporary separator -->
+    <hr style="background-color: black; margin: 0" />
+
+    <footer>
+      <div class="section2">
+        <p class="text white">Coming soon.</p>
+        <div class="linkWrap">
+          <a href="" target="_blank">
+            <img
+              src="./Assets/linklogos/instagram.png"
+              style="filter: invert(1)"
+            />
+          </a>
+          <a href="" target="_blank" style="filter: invert(1)">
+            <img src="./Assets/linklogos/twitter.png" />
+          </a>
+        </div>
+        <br />
+      </div>
+    </footer>
   </body>
 </html>

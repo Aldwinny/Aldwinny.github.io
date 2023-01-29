@@ -1,0 +1,321 @@
+/* Import Open Sans from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/* Overrides */
+
+::selection {
+  background: rgb(226, 226, 182);
+  color: rgb(119, 6, 53);
+}
+
+::-moz-selection {
+  background: rgb(226, 226, 182);
+  color: rgb(119, 6, 53);
+}
+
+body {
+  background-color: rgb(119, 6, 53);
+  color: white;
+  font-family: "Open Sans";
+  font-size: 2rem;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+/* Navigation Bar Styles */
+
+nav {
+  /* Positioning */
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%;
+
+  /* Design */
+  background-color: transparent;
+
+  /* transition */
+  transition-duration: 0.3s;
+}
+
+nav > div {
+  margin: 0 5px;
+}
+
+.highlight-plain::selection {
+  background: wheat;
+  color: black;
+}
+
+.highlight-plain::-moz-selection {
+  background: wheat;
+  color: black;
+}
+
+.scrolled-up {
+  background-color: rgb(119, 6, 53);
+  position: fixed;
+  width: 100%;
+  animation-name: going-down;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.scrolled-top {
+  background: transparent;
+}
+
+.nav-left {
+  margin-right: auto;
+}
+
+.nav-right {
+  margin-left: auto;
+}
+
+.arrow-button:hover {
+  transition-duration: 500ms;
+  color: yellow;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+}
+
+@keyframes going-down {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .icon-extra {
+    line-height: 50px;
+  }
+}
+
+/* Header Styles */
+
+.title-container {
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  transition-duration: 0.5s;
+
+  /* Positioning */
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  width: 100%;
+}
+
+.title-container > p {
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  text-overflow: ellipsis;
+
+  text-align: center;
+  margin: 0 7vw;
+}
+
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+  .title-container {
+    top: 50%;
+  }
+}
+
+/* Image Control */
+
+.image-small {
+  width: 100%;
+  height: auto;
+}
+
+.image-blur {
+  filter: blur(3px);
+}
+
+.image-blur-dark {
+  position: absolute;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 1)
+  );
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+  .image-small {
+    width: 70%;
+    height: auto;
+  }
+}
+
+/* etc */
+.noselect {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+/* Secondary Navigator */
+.btn-navigator {
+  background: black;
+  width: 100%;
+  height: 8vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.btn-navigator > * {
+  text-transform: uppercase;
+  margin: 0 auto;
+
+  /* MODIFIED implementation from text-style.css */
+  text-align: center;
+  font-size: 3vh; /* For unsupported browsers */
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+@media only screen and (min-width: 901px) {
+  .btn-navigator > * {
+    transition-duration: 300ms;
+  }
+
+  .btn-navigator > *:hover {
+    color: yellow;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .btn-navigator {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .btn-navigator {
+    height: 75px;
+  }
+
+  .btn-navigator > * {
+    /* Resizing */
+    width: 70%;
+    height: 35px;
+
+    /* Button design */
+    background: #770635;
+    color: white;
+    border-radius: 4px;
+
+    /* MODIFIED implementation from text-style.css */
+    text-transform: capitalize;
+    line-height: 30px;
+    font-size: 3vh; /* For unsupported browsers */
+    font-size: clamp(0.3rem, 3vw, 1rem);
+  }
+
+  .btn-navigator > * > span {
+    display: none;
+  }
+
+  .btn-navigator > *:active {
+    background: #5e042a;
+  }
+
+  .btn-navigator > *:visited {
+    color: yellow;
+  }
+}
+
+/* Auto scroll section */
+.announcements {
+  background: #5e042a;
+  height: 80vh;
+  width: 100%;
+}
+
+.announcements > p {
+  padding: 2% 0;
+  text-align: center;
+
+  font-size: 4vh; /* For unsupported browsers */
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.announcements > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  padding: 2% 0;
+  margin: 0 3%;
+  text-align: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3vh; /* For unsupported browsers */
+  font-size: clamp(0.5rem, 4vw, 1.7rem);
+}
+
+.announcements > div > div {
+  background: whitesmoke;
+  color: black;
+}
+
+@media only screen and (max-height: 800px) {
+  .announcements {
+    height: 100vh;
+  }
+}

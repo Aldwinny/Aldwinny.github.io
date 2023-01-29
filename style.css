@@ -383,6 +383,15 @@ span.highlight {
   color: var(--primary-text);
 }
 
+.chips {
+  font-size: 0.6em;
+  background-color: #b752e6;
+  padding: 2px 10px;
+  border-radius: 1em;
+  margin-left: 10px;
+  color: white;
+}
+
 /* LVL: 6 - MEDIA QUERIES SECTION */
 @media screen and (pointer: fine) and (min-width: 1300px) {
   .mob-area .text-card:hover,
