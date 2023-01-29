@@ -179,8 +179,8 @@ section.tech .icon-container .icon {
   margin: 10px;
 
   /* TEMPORARY */
-  width: 100px;
-  height: 120px;
+  width: 70px;
+  height: 70px;
 
   image-rendering: crisp-edges;
 
@@ -355,12 +355,15 @@ span.highlight {
 .text-card > figure > img,
 .text-card-2 > figure > img {
   width: 100%;
+  height: 200px;
+  object-fit: contain;
 }
 
 .text-card > div,
 .text-card-2 > div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .text-card {
@@ -425,14 +428,13 @@ span.highlight {
   .text-card,
   .text-card-2 {
     text-align: center;
-    display: block;
+    flex-direction: column !important;
   }
 
   .tc-container,
   .tc-container-2 {
     width: 70%;
     margin: 50px auto;
-    height: 15em;
   }
 
   .text-card > figure,
@@ -633,7 +635,7 @@ span.highlight {
     height: 0;
   }
   100% {
-    height: 630px;
+    height: 830px;
   }
 }
 
