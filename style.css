@@ -730,3 +730,7 @@ span.highlight {
     transform: translateX(-100px);
   }
 }
+
+.clickable {
+  cursor: pointer;
+}
