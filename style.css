@@ -61,10 +61,6 @@ nav a {
   position: relative;
 }
 
-nav a:first-of-type {
-  margin-left: auto;
-}
-
 nav a:hover {
   color: var(--highlight-color);
 }
@@ -188,8 +184,10 @@ section.tech .icon-container .icon {
 }
 
 footer .icon-container .icon {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
+
+  margin: 0 10px 10px 0;
 
   image-rendering: crisp-edges;
 }
@@ -489,6 +487,12 @@ span.highlight {
   }
 }
 
+@media only screen and (min-width: 650px) {
+  nav a:first-of-type {
+    margin-left: auto;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   nav {
     flex-wrap: wrap;
@@ -503,10 +507,8 @@ span.highlight {
 
   nav a {
     font-size: 1.2rem;
-  }
 
-  nav a:first-of-type {
-    margin: 0 2vw;
+    margin: 0 2vw 3vh 2vw;
   }
 
   nav a::before {
