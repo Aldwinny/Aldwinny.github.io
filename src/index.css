@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --bg-color: #000012;
@@ -16,12 +19,7 @@
   --primary-font: "Nunito", sans-serif;
   --secondary-font: "Open Sans", sans-serif;
 
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-html {
-  scroll-behavior: smooth;
 }

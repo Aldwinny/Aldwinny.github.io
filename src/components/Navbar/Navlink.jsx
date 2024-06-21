@@ -8,7 +8,7 @@ function Navlink({goto, target = "", className, children, isList = false}) {
         </a>
     </li> 
     :
-    <a href={goto} target={target}>
+    <a href={goto} target={target} className={className}>
         {children}
     </a>
 }

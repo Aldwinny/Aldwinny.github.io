@@ -17,8 +17,8 @@ export default {
         "highlight-color": "#c475df",
       },
       fontFamily: {
-        "primary": ["Nunito", "sans-serif"],
-        "secondary": ["Open Sans", "sans-serif"]
+        "primary": "var(--primary-font)",
+        "secondary": "var(--secondary-font)"
       }
     },
   },
