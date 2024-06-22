@@ -21,6 +21,29 @@ html {
   scroll-behavior: smooth;
 }
 
+.maintenance {
+  background: var(--bg-color);
+  color: var(--primary-text);
+
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 2;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maintenance p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px;
+  margin-bottom: 100px;
+}
+
 body {
   background: var(--bg-color);
   color: var(--primary-text);
@@ -32,6 +55,7 @@ body {
   /* TODO: TEMPORARY */
   height: 200vh;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* LVL: 2 - OVERRIDES & CUSTOMIZED TAGS*/
