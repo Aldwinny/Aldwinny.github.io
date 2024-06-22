@@ -13,8 +13,13 @@
   --primary-text: #fff;
   --primary-colored-text: #efd758;
   --secondary-text: #979797;
-
   --highlight-color: #c475df;
+
+  --gradient-tomato: #cc2b5e;
+  --gradient-purple: #753a88;
+  --gradient-purple-2: #42275a;
+  --gradient-magenta: #734b6d;
+
 
   --primary-font: "Nunito", sans-serif;
   --secondary-font: "Open Sans", sans-serif;

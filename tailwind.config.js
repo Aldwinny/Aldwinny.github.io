@@ -8,17 +8,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary": "#000012",
-        "secondary": "#221d30",
-        "footer": "rgb(11, 16, 38)",
-        "text-primary": "#fff",
-        "text-highlight": "#efd758",
-        "text-secondary": "#979797",
-        "highlight-color": "#c475df",
+        "themic-primary": "var(--bg-color)",
+        "themic-secondary": "var(--bg-color-2)",
+        "themic-footer": "var(--bg-color-footer)",
+        "themic-txt-primary": "var(--primary-text)",
+        "themic-txt-highlight": "var(--primary-colored-text)",
+        "themic-txt-secondary": "var(--secondary-text)",
+        "themic-highlight-color": "var(--highlight-color)",
+        "themic-grad-tomato": "var(--gradient-tomato)",
+        "themic-grad-purple": "var(--gradient-purple)",
+        "themic-grad-purple-2": "var(--gradient-purple-2)",
+        "themic-grad-magenta": "var(--gradient-magenta)"
       },
       fontFamily: {
-        "primary": "var(--primary-font)",
-        "secondary": "var(--secondary-font)"
+        "custom-primary": "var(--primary-font)",
+        "custom-secondary": "var(--secondary-font)"
       }
     },
   },

@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='bg-primary overflow-x-hidden text-text-primary pt-6 font-primary'>
+    <div className='bg-themic-primary overflow-x-hidden text-themic-txt-primary pt-6 font-custom-primary'>
       <Navbar />
       <Header />
       <Content />
