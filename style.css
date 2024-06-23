@@ -55,7 +55,7 @@ body {
   /* TODO: TEMPORARY */
   height: 200vh;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 /* LVL: 2 - OVERRIDES & CUSTOMIZED TAGS*/
