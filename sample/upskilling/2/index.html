@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
+    <title>Alds' Corner</title>
+</head>
+<body>
+    <aside>
+        <h1>Alds Corner</h1>
+    </aside>
+    <section>
+        <div class="section-content">
+            <h2 class="section-title">Click one to know more about me!</h2>
+            <div class="section-choices">
+                <div class="choice-item choice-item-icon" onclick="focusChoiceItem(0)">
+                    <div><img src="./assets/logo_wizhat.png"></div>
+                    <h3>About Me</h3>
+                </div>
+                <div class="choice-item choice-item-icon" onclick="focusChoiceItem(1)">
+                    <div><img src="./assets/logo_damit_yarn.png"></div>
+                    <h3>Education</h3>
+                </div>
+                <div class="choice-item choice-item-icon" onclick="focusChoiceItem(2)">
+                    <div><img src="./assets/logo_android.png"></div>
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="choice-item" onclick="focusChoiceItem(3)">
+                    <div><img src="./assets/logo_sonia_strumm.gif"></div>
+                    <h3>Hobbies</h3>
+                </div>
+                <div class="choice-item" onclick="focusChoiceItem(4)">
+                    <div><img src="./assets/logo_dewy.png"></div>
+                    <h3>Contact Me</h3>
+                </div>
+            </div>
+        </div>
+        <div class="section-cover">
+        </div>
+    </section>
+    <div class="choice-content" id="content">
+        <div class="choice-content-close" onclick="hideChoiceContent()">
+            < Back
+        </div>
+        <h1>Sample Title</h1>
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt vel rem corporis qui impedit hic eos sint molestias inventore quis provident sed, magnam atque a dolores facere architecto laboriosam. Minima.</p>
+        </div>
+    </div>
+</body>
+</html>
