@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer></script>
+    <title>Mini Book Shop</title>
+  </head>
+  <body>
+    <header class="h-parent">
+      <h1 class="h-title montserrat-regular">Little Library Bookstore</h1>
+      <div class="rounded h-search-parent">
+        <input
+          type="text"
+          id="search"
+          class="h-search"
+          placeholder="Find a book"
+        />
+        <div
+          class="clickable h-search-icon"
+          onclick="search(document.getElementById('search').value)"
+          tabindex="0"
+        >
+          <span class="material-symbols-outlined icon padded no-select">
+            search
+          </span>
+        </div>
+      </div>
+    </header>
+    <section id="s-content" class="flex">
+      <aside id="categories" class="s-categories">
+        <p>Filter by Category</p>
+      </aside>
+      <section class="s-books-parent">
+        <h2>Books</h2>
+        <div id="books" class="s-books flex flex-wrap">
+          <div class="item-book item-create margin-small">
+            <button onclick="showBookCreator()">
+              <span class="material-symbols-outlined"> add </span><br />
+              <p>Add a new book</p>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="modify-book-section" class="s-modify-section">
+      <div class="s-modify-back clickable" onclick="toggleBookSection(false)">
+        <span class="material-symbols-outlined">arrow_back</span>
+        <h2>Back</h2>
+      </div>
+      <div id="modify-book" class="s-modify-form">
+        <img
+          id="modify-book-image"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1582000629l/51922726.jpg"
+          alt="book"
+        /><br />
+        <label for="isbn" id="isbn">ISBN: </label>
+        <input
+          type="text"
+          value=""
+          placeholder="Enter the ISBN Here"
+          required
+        /><br />
+        <label for="isbn" id="isbn">Title: </label>
+        <input
+          type="text"
+          value=""
+          placeholder="Enter the book's Title Here"
+          required
+        /><br />
+        <label for="isbn" id="isbn">Subtitle: </label>
+        <input
+          type="text"
+          value=""
+          placeholder="Enter the book's Subtitle Here"
+        /><br />
+        <label for="isbn" id="isbn">Author: </label>
+        <input
+          type="text"
+          value=""
+          placeholder="Enter the author here"
+          required
+        /><br />
+        <label for="isbn" id="isbn">published: </label>
+        <input
+          type="date"
+          value=""
+          placeholder="Enter the date of publishing here"
+        /><br />
+        <label for="isbn" id="isbn">publisher: </label>
+        <input
+          type="text"
+          value=""
+          placeholder="Enter the publisher"
+          required
+        /><br />
+        <label for="isbn" id="isbn">description: </label>
+        <input
+          type="text"
+          value=""
+          placeholder="Enter the book's description here"
+        /><br />
+        <label for="isbn" id="isbn">categories (comma separated): </label>
+        <input
+          type="text"
+          value=""
+          placeholder="Enter the categories here"
+          required
+        /><br />
+        <label for="isbn" id="isbn">price (Php): </label>
+        <input
+          type="text"
+          value=""
+          placeholder="Enter the price in pesos"
+          required
+        /><br />
+        <div class="s-modify-button-grp">
+          <button id="s-modify-button-create">Add Book</button>
+          <button id="s-modify-button-modify">Modify Book</button>
+          <button id="s-modify-button-delete">Delete Book</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
