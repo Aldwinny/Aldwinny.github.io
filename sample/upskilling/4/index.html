@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer></script>
+    <title>Mini Book Shop</title>
+  </head>
+  <body>
+    <header class="h-parent">
+      <h1 class="h-title montserrat-regular">Random Quote</h1>
+    </header>
+    <section id="s-content" class="flex">
+      <section class="s-quotes-parent">
+        <h2>Quote</h2>
+        <div id="quote" class="s-quotes flex flex-wrap">
+          <span id="quote-pending" class="material-symbols-outlined">
+            pending
+          </span>
+          <span id="quote-error" class="material-symbols-outlined">
+            error
+          </span>
+          <p id="quote-data"></p>
+        </div>
+        <div>
+          <button onclick="loadQuote()">Get another quote</button>
+          <button id="fail-button" onclick="setFail(!shouldFail)">
+            Simulate Failing
+          </button>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
