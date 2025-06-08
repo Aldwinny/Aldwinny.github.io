@@ -316,7 +316,8 @@ function prepareBooks() {
   sortBooks();
   let bookSection = document.getElementById("books");
 
-  for (const book of books) {
+  for (let i = 0; i < books.length; i++) {
+    let book = books[i];
     if (isSearching) {
       console.log(`searching for ${search_query}`);
       if (
